@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://dsndwguuh1yqu"]
+
+[ext_resource type="Texture2D" uid="uid://cktbl2i4vpxyg" path="res://addons/LittleBuddy/Assets/ChickenBuddy.png" id="1_pbo2t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb4sm"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(0, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu5pb"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(64, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n70yx"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(128, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvo57"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(192, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05r7m"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(256, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqnx2"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(320, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05ftl"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(384, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veavd"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(448, 0, 64, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvuhs"]
+atlas = ExtResource("1_pbo2t")
+region = Rect2(512, 0, 64, 70)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1g2yo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb4sm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yu5pb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n70yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvo57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05r7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqnx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05ftl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_veavd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvuhs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="LittleBuddy" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.413177, 0.732813, 0.977798, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/TextureRect"]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_1g2yo")
+autoplay = "default"
