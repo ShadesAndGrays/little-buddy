@@ -1,7 +1,6 @@
 @tool
 extends EditorPlugin
 
-@export var speed = 1
 var little_buddy:Control = preload("res://addons/LittleBuddy/Scenes/LittleBuddy.tscn").instantiate()
 var little_buddy_sprite:AnimatedSprite2D
 var frame:float = 0;
